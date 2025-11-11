@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simply Complex Africa™ | African Diaspora Women Transforming Business Together</title>
+    <meta name="description" content="Join the movement: Simply Complex Africa™ - Where African Diaspora Women Build, Connect, and Transform Business. October 30, 2025, Sandton, South Africa.">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Roboto+Condensed:wght@300;400;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery | Simply Complex Africa™</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <img src="https://page.gensparksite.com/v1/base64_upload/8c569fba3d7b73834840045f945d6040" alt="Simply Complex Africa™" class="logo">
+      </div>
+      <ul class="nav-list">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="gallery.html" class="nav-link active">Gallery</a></li>
+        <li><a href="pledge_wall.html" class="nav-link active">Pledge Wall</a></li>
+        <li><a href="commitment_wall.html" class="nav-link active">Commitment Wall</a></li>
+        <li><a href="magazine.html" class="nav-link">Magazine</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+<br>
+<br>
+<br>
+  <section class="gallery">
+    <div class="container">
+      <h2>Gallery</h2>
+      <p>Browse highlights from Simply Complex Africa™ events.</p>
+  
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="images/Boitumelo.jpg" alt="Boitumelo">
+        </div>
+        <div class="gallery-item">
+          <img src="images/Guest2.jpg" alt="Guest 2">
+        </div>
+        <div class="gallery-item">
+          <img src="images/Guest3.jpg" alt="Guest 3">
+        </div>
+        <div class="gallery-item">
+          <img src="images/Guest4.jpg" alt="Guest 4">
+        </div>
+        <div class="gallery-item">
+          <img src="images/Guest5.jpg" alt="Guest 5">
+        </div>
+        <div class="gallery-item">
+          <img src="images/Guest6.jpg" alt="Guest 6">
+        </div>
+        <div class="gallery-item">
+          <img src="images/Guest7.jpg" alt="Guest 7">
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <style>
+  /* Gallery Section */
+.gallery {
+  background: #1a5233; /* Deep purple background matching branding */
+  padding: 60px 20px;
+  text-align: center;
+  color: #fff; /* White text for contrast */
+  font-family: 'Inter', sans-serif;
+}
+
+.gallery h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #f0c14b; /* Gold accent color */
+}
+
+.gallery p {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  color: #e0dede; /* Soft white/gray for subtitles */
+}
+
+/* Grid Layout */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); /* stronger shadow for dark background */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  border: 3px solid #f0c14b; /* subtle gold border for elegance */
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.45);
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+  </style>
+  
+  <script>
+  const carouselImages = document.querySelector('.carousel-images');
+  const imageItems = carouselImages.children;
+  const prevBtn = document.querySelector('.prev');
+  const nextBtn = document.querySelector('.next');
+  const dots = document.querySelectorAll('.dot');
+  let currentIndex = 0;
+  
+  function updateCarousel() {
+    carouselImages.style.transform = `translateX(-${currentIndex * 100}%)`;
+    dots.forEach((dot, i) => dot.classList.toggle('active', i === currentIndex));
+  }
+  
+  prevBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex === 0) ? imageItems.length - 1 : currentIndex - 1;
+    updateCarousel();
+  });
+  
+  nextBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex === imageItems.length - 1) ? 0 : currentIndex + 1;
+    updateCarousel();
+  });
+  
+  dots.forEach((dot, i) => {
+    dot.addEventListener('click', () => {
+      currentIndex = i;
+      updateCarousel();
+    });
+  });
+  
+  // Optional auto-play
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % imageItems.length;
+    updateCarousel();
+  }, 5000);
+  </script>
+  
+  <!-- Poster Section -->
+<section class="poster-section">
+  <img src="poster.png" alt="Simply Complex Africa™ Poster" class="poster-image">
+</section>
+
+    <!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <!-- <img src="poster.png" alt="Simply Complex Africa™ Poster" class="footer-poster"> -->
+
+      </div>
+      <div class="footer-text">
+        <p>&copy; 2025 Simply Complex Africa™. All rights reserved.</p>
+        <p>Where African Diaspora Women Build, Connect, and Transform Business</p>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

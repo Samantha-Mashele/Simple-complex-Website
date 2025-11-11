@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Commitment Wall | Simply Complex Africa™</title>
+  <meta name="description" content="Join the movement: Simply Complex Africa™ - Where African Diaspora Women Build, Connect, and Transform Business. October 30, 2025, Sandton, South Africa.">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Roboto+Condensed:wght@300;400;700;900&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+  
+  <!-- AOS Animation -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/commitment-wall.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <img src="https://page.gensparksite.com/v1/base64_upload/8c569fba3d7b73834840045f945d6040" alt="Simply Complex Africa™" class="logo">
+      </div>
+      <ul class="nav-list" id="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="pledge_wall.html" class="nav-link active">Pledge Wall</a></li>
+        <li><a href="commitment_wall.html" class="nav-link active">Commitment Wall</a></li>
+        <li><a href="magazine.html" class="nav-link">Magazine</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Header -->
+  <section class="commitment-hero">
+    <div class="container">
+      <div class="hero-content" data-aos="fade-up">
+        <h1>Pledge Wall</h1>
+        <p class="hero-subtitle">Your voice. Your pledge. Our future.</p>
+        <div class="stats-bar">
+          <div class="stat"><span id="totalPledges">0</span> Pledges</div>
+          <div class="stat"><span id="totalImpact">0</span> Impact Points</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI Pledge Form -->
+  <section class="pledge-section">
+    <div class="container">
+      <div class="pledge-form" data-aos="fade-up" data-aos-delay="200">
+        <div class="form-glow"></div>
+        <div class="form-header">
+          <h3 class="form-title">Make Your Commitment</h3>
+          <div class="ai-badge pulse">AI-Powered</div>
+        </div>
+        <form id="pledgeForm">
+          <div class="form-group">
+            <label for="name">Name *</label>
+            <input type="text" id="name" placeholder="Enter your name" required />
+          </div>
+          <div class="form-group">
+            <label for="company">Company Name *</label>
+            <input type="text" id="company" placeholder="Enter your company name" required />
+          </div>        
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" placeholder="you@example.com" required />
+          </div>
+          <div class="form-group">
+            <div class="voice-input-header">
+              <label for="message">Your Commitment *</label>
+              <button type="button" id="voiceBtn" class="voice-btn pulse-hover">
+                <span class="mic-icon">Microphone</span> Voice Input
+              </button>
+            </div>
+            <textarea id="message" placeholder="What change will you bring to Africa? Speak or type..." required></textarea>
+            <div id="listeningIndicator" class="listening-indicator pulse">
+              <span class="wave"></span> Listening... Speak now
+            </div>
+          </div>
+
+          <div id="aiAnalysis" class="ai-analysis">
+            <div class="ai-header">
+              <span class="ai-icon">Robot</span>
+              <span class="ai-title">AI Analysis</span>
+            </div>
+            <div class="ai-grid">
+              <div class="ai-item">
+                <div class="ai-label">Category</div>
+                <div id="aiCategory" class="ai-value glow">Social Justice</div>
+              </div>
+              <div class="ai-item">
+                <div class="ai-label">Sentiment</div>
+                <div id="aiSentiment" class="ai-value sentiment-positive">Positive</div>
+              </div>
+              <div class="ai-item">
+                <div class="ai-label">Impact</div>
+                <div id="aiImpactScore" class="ai-value glow">85/100</div>
+              </div>
+            </div>
+          </div>
+
+          <div id="analyzingIndicator" class="analyzing-indicator">
+            <div class="spinner"></div>
+            <span>AI is analyzing your commitment...</span>
+          </div>
+
+          <div class="form-group">
+            <label for="category">Category *</label>
+            <select id="category" required>
+              <option value="">Select a category</option>
+              <option>Education</option>
+              <option>Environment</option>
+              <option>Healthcare</option>
+              <option>Technology</option>
+              <option>Economic Development</option>
+              <option>Social Justice</option>
+              <option>Infrastructure</option>
+              <option>Agriculture</option>
+            </select>
+          </div>
+
+          <button type="submit" id="submitBtn" class="submit-btn gradient-btn">
+            <span>Submit Commitment</span>
+            <i class="fas fa-arrow-right"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Live Commitment Wall -->
+  <section class="wall-section">
+    <div class="container">
+      <h2 class="wall-title" data-aos="fade-up">Live pledge Wall</h2>
+      <div id="commitmentsContainer" class="commitments-grid"></div>
+      <div id="noPledges" class="no-pledges" data-aos="fade-up">
+        <p>No commitments yet. <strong>Be the first!</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Poster -->
+  <section class="poster-section" data-aos="fade-up">
+    <img src="poster.png" alt="Simply Complex Africa™ Poster" class="poster-image">
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-text">
+        <p>© 2025 Simply Complex Africa™. All rights reserved.</p>
+        <p>Where African Diaspora Women Build, Connect, and Transform Business</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="js/commitment-wall.js"></script>
+</body>
+</html>

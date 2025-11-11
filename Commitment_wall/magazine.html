@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magazine | Simply Complex Africa™</title>
+    <meta name="description" content="Explore our digital magazine featuring stories, visuals, and thought pieces showcasing Africa's collective commitment journey.">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Roboto+Condensed:wght@300;400;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/magazine.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="https://page.gensparksite.com/v1/base64_upload/8c569fba3d7b73834840045f945d6040" alt="Simply Complex Africa™" class="logo">
+            </div>
+            <ul class="nav-list" id="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li><a href="pledge_wall.html" class="nav-link active">Pledge Wall</a></li>
+                <li><a href="commitment_wall.html" class="nav-link active">Commitment Wall</a></li>
+                <li><a href="magazine.html" class="nav-link active">Magazine</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="section" id="magazine">
+            <h2>Digital Magazine: Highlights & Features</h2>
+            <p>Explore our curated collection of stories, visuals, and thought pieces showcasing Africa's collective commitment journey.</p>
+            <div class="magazine-grid">
+                <div class="magazine-card">
+                    <img src="https://via.placeholder.com/400x250/0a0f1b/00ffc3?text=Innovation+in+Motion" alt="Innovation feature">
+                    <h4>Innovation in Motion</h4>
+                    <p>How technology and creativity are shaping a new era of African transformation.</p>
+                </div>
+                <div class="magazine-card">
+                    <img src="https://via.placeholder.com/400x250/0a0f1b/f6c454?text=Collective+Voices" alt="Community feature">
+                    <h4>The Power of Collective Voices</h4>
+                    <p>Communities rising together through small but powerful commitments.</p>
+                </div>
+                <div class="magazine-card">
+                    <img src="https://via.placeholder.com/400x250/0a0f1b/00ffc3?text=Sustainability+Stories" alt="Sustainability feature">
+                    <h4>Stories of Sustainability</h4>
+                    <p>Meet the environmental champions making a difference across the continent.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-text">
+                <p>© 2025 Simply Complex Africa™. All rights reserved.</p>
+                <p>Where African Diaspora Women Build, Connect, and Transform Business</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init();
+
+        // Mobile menu toggle
+        document.getElementById('hamburger').addEventListener('click', function() {
+            document.getElementById('nav-menu').classList.toggle('active');
+            this.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

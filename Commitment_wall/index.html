@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simply Complex Africa™ | African Diaspora Women Transforming Business Together</title>
+    <meta name="description" content="Join the movement: Simply Complex Africa™ - Where African Diaspora Women Build, Connect, and Transform Business. October 30, 2025, Sandton, South Africa.">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Roboto+Condensed:wght@300;400;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2xx.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simply Complex Africa™ | Home</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <img src="https://page.gensparksite.com/v1/base64_upload/8c569fba3d7b73834840045f945d6040" alt="Simply Complex Africa™" class="logo">
+      </div>
+      <ul class="nav-list">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="pledge_wall.html" class="nav-link active">Pledge Wall</a></li>
+        <li><a href="commitment_wall.html" class="nav-link active">Commitment Wall</a></li>
+        <li><a href="magazine.html" class="nav-link">Magazine</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="contact.html" class="btn-primary">Get In Touch</a>
+      </div>
+      
+    </div>
+  </nav>
+  
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+        <div class="hero-text">
+            <h1 class="hero-title">
+                <span class="title-main">Simply Complex Africa™</span>
+                <span class="title-subtitle">Where African Diaspora Women Build, Connect, and Transform Business</span>
+            </h1>
+            <div class="event-details">
+                <div class="detail-item">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span>October 30, 2025</span>
+                </div>
+                <div class="detail-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Alexander Forbes, Sandton, South Africa</span>
+                </div>
+                <div class="detail-item">
+                    <i class="fas fa-users"></i>
+                    <span>The Richest Square Mile in Africa</span>
+                </div>
+            </div>
+            <p class="hero-description">
+                Join the launch of a movement that creates a marketplace of possibility where African diaspora women leaders, youth innovators, corporates, and policy makers actively co-create solutions with measurable impact.
+            </p>
+            <div class="hero-cta">
+                <a href="contact.html" class="btn-primary btn-large">Join The Movement</a>
+                <a href="about.html" class="btn-secondary btn-large">Learn More</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="hero-logo-container">
+                <img src="https://page.gensparksite.com/v1/base64_upload/8c569fba3d7b73834840045f945d6040" alt="Simply Complex Africa™ Logo" class="hero-logo">
+            </div>
+        </div>
+    </div>
+    <div class="scroll-indicator">
+        <i class="fas fa-chevron-down"></i>
+    </div>
+</section>
+
+  <!-- Poster Section -->
+<section class="poster-section">
+  <img src="poster.png" alt="Simply Complex Africa™ Poster" class="poster-image">
+</section>
+    <!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <!-- <img src="poster.png" alt="Simply Complex Africa™ Poster" class="footer-poster"> -->
+
+      </div>
+      <div class="footer-text">
+        <p>&copy; 2025 Simply Complex Africa™. All rights reserved.</p>
+        <p>Where African Diaspora Women Build, Connect, and Transform Business</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- AOS Animation Library -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+    // Initialize AOS
+    document.addEventListener('DOMContentLoaded', function() {
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100
+        });
+
+        // Navigation functionality
+        const navbar = document.getElementById('navbar');
+        const navLinks = document.querySelectorAll('.nav-link');
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+        
+        // Scroll effect for navbar
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        
+        // Mobile menu toggle
+        hamburger.addEventListener('click', function() {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+        
+        // Close menu when clicking on a link
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+        
+        // Smooth scrolling for navigation links
+        const links = document.querySelectorAll('a[href^="#"]');
+        
+        links.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+                
+                if (targetSection) {
+                    const offsetTop = targetSection.offsetTop - 80;
+                    
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Contact form handling
+        const contactForm = document.getElementById('contactForm');
+        
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Show success message (you can replace this with actual form handling)
+                alert('Thank you for your message! We will get back to you soon.');
+                
+                // Reset form
+                contactForm.reset();
+            });
+        }
+
+        // Counter animations
+        function animateCounters() {
+            const stats = document.querySelectorAll('.stat-number');
+            
+            stats.forEach(stat => {
+                const target = stat.textContent;
+                if (target === '∞') return;
+                
+                const targetNum = parseInt(target.replace('+', ''));
+                let current = 0;
+                const increment = targetNum / 50;
+                
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= targetNum) {
+                        stat.textContent = target;
+                        clearInterval(timer);
+                    } else {
+                        stat.textContent = Math.floor(current) + '+';
+                    }
+                }, 40);
+            });
+        }
+
+        // Trigger counter animation when stats section is visible
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    observer.unobserve(entry.target);
+                }
+            });
+        });
+
+        const statsSection = document.querySelector('.impact-stats');
+        if (statsSection) {
+            observer.observe(statsSection);
+        }
+    });
+</script>
+</body>
+</html>
+</body>
+</html>
