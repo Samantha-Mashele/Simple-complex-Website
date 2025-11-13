@@ -77,11 +77,22 @@
             <label for="email">Email *</label>
             <input type="email" id="email" placeholder="you@example.com" required />
           </div>
+
+          <!-- ✅ Updated “Your Commitment” section -->
           <div class="form-group">
+            <label for="commitmentType">Choose Input Type *</label>
+            <div style="display:flex; gap:10px; margin-bottom:10px;">
+              <label><input type="radio" name="inputType" value="voice" checked> Voice Input 🎤</label>
+              <label><input type="radio" name="inputType" value="video"> Video Upload 🎥</label>
+            </div>
+          </div>
+
+          <!-- Voice Input -->
+          <div class="form-group" id="voiceSection">
             <div class="voice-input-header">
               <label for="message">Your Commitment *</label>
               <button type="button" id="voiceBtn" class="voice-btn pulse-hover">
-                <span class="mic-icon">Microphone</span> Voice Input
+                <span class="mic-icon">🎤</span> Start Voice Input
               </button>
             </div>
             <textarea id="message" placeholder="What change will you bring to Africa? Speak or type..." required></textarea>
@@ -90,9 +101,18 @@
             </div>
           </div>
 
+          <!-- Video Upload -->
+          <div class="form-group" id="videoSection" style="display:none;">
+            <label for="videoUpload">Upload Your Pledge Video *</label>
+            <input type="file" id="videoUpload" accept="video/*" />
+            <div id="videoPreview" style="margin-top:15px; display:none;">
+              <video id="previewPlayer" controls autoplay loop style="width:100%; border-radius:10px;"></video>
+            </div>
+          </div>
+
           <div id="aiAnalysis" class="ai-analysis">
             <div class="ai-header">
-              <span class="ai-icon">Robot</span>
+              <span class="ai-icon">🤖</span>
               <span class="ai-title">AI Analysis</span>
             </div>
             <div class="ai-grid">
@@ -143,7 +163,7 @@
   <!-- Live Commitment Wall -->
   <section class="wall-section">
     <div class="container">
-      <h2 class="wall-title" data-aos="fade-up">Live pledge Wall</h2>
+      <h2 class="wall-title" data-aos="fade-up">Live Pledge Wall</h2>
       <div id="commitmentsContainer" class="commitments-grid"></div>
       <div id="noPledges" class="no-pledges" data-aos="fade-up">
         <p>No commitments yet. <strong>Be the first!</strong></p>
@@ -169,5 +189,38 @@
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script src="js/commitment-wall.js"></script>
+
+  <!-- ✅ JS for video/voice toggle + video preview -->
+  <script>
+    const voiceSection = document.getElementById("voiceSection");
+    const videoSection = document.getElementById("videoSection");
+    const videoUpload = document.getElementById("videoUpload");
+    const videoPreview = document.getElementById("videoPreview");
+    const previewPlayer = document.getElementById("previewPlayer");
+
+    // Toggle between voice and video options
+    document.querySelectorAll('input[name="inputType"]').forEach((radio) => {
+      radio.addEventListener("change", function() {
+        if (this.value === "voice") {
+          voiceSection.style.display = "block";
+          videoSection.style.display = "none";
+        } else {
+          voiceSection.style.display = "none";
+          videoSection.style.display = "block";
+        }
+      });
+    });
+
+    // Preview video when selected
+    videoUpload.addEventListener("change", function(event) {
+      const file = event.target.files[0];
+      if (file) {
+        const videoURL = URL.createObjectURL(file);
+        previewPlayer.src = videoURL;
+        videoPreview.style.display = "block";
+      }
+    });
+  </script>
+
 </body>
 </html>
