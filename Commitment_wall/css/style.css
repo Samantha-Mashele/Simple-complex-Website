@@ -1568,20 +1568,28 @@ p {
   border-color: var(--accent-gold);
 }
 
-/* Poster Section */
 .poster-section {
-width: 100%;
-padding: 0; /* remove top/bottom gaps */
-margin: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
 }
 
-/* Image fills full width, auto height */
 .poster-image {
-width: 100%;
-height: auto;
-display: block; /* removes small bottom gap */
-border-radius: 0; /* optional - remove rounded corners */
-object-fit: cover;
+  width: 60%;
+  max-width: 1200px;
+  border-radius: 20px;
+  display: block;
+  object-fit: cover;
+  box-shadow: 0px 8px 35px rgba(0, 0, 0, 0.2);
+
+  transition: transform 0.5s ease-in-out;  /* smooth animation */
+}
+
+/* Zoom heartbeat on hover */
+.poster-image:hover {
+  transform: scale(1.05);   /* enlarges by 5% */
 }
 
 
