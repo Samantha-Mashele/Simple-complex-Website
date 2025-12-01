@@ -1389,4 +1389,4 @@ document.addEventListener('DOMContentLoaded', function () {
   // Debug: Log initial state
   console.log('Commitment Wall JS Loaded');
   console.log('Initial commitments:', commitments.length);
-});
+});z

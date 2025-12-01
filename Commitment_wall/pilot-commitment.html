@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Pilot Commitment | iEvolution × Rosebank College</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f9fafb;
+    color: #1f2937;
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 1rem;
+  }
+
+  h2, h3 {
+    margin-bottom: 1rem;
+  }
+
+  /* Tabs */
+  .tabs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .tab-btn {
+    padding: 0.5rem 1rem;
+    background: #e5e7eb;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s;
+  }
+
+  .tab-btn:hover {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    color: white;
+    box-shadow: 0 3px 10px rgba(59, 130, 246, 0.3);
+  }
+
+  .tab-btn.active {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    color: white;
+    box-shadow: 0 3px 10px rgba(59, 130, 246, 0.4);
+  }
+
+  /* Tab Content */
+  .tab-content {
+    display: none;
+    background: white;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  }
+
+  .tab-content.active {
+    display: block;
+  }
+
+  /* Pillars */
+  .pillar {
+    margin-bottom: 1rem;
+  }
+
+  .pillar-bar {
+    width: 100%;
+    background: #e0e0e0;
+    border-radius: 8px;
+    height: 18px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .pillar-progress {
+    height: 100%;
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    border-radius: 8px 0 0 8px;
+    transition: width 0.5s;
+  }
+
+  /* Tooltip on hover */
+  .pillar-progress:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: -35px;
+    left: 0;
+    background: #059669;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    box-shadow: 0 4px 12px rgba(5, 150, 105, 0.3);
+  }
+
+  /* Timeline */
+  .timeline {
+    list-style: none;
+    padding: 0;
+  }
+
+  .timeline li {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(14, 165, 233, 0.2);
+  }
+
+  /* Metrics */
+  .metrics-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .metric {
+    flex: 1 1 200px;
+    background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
+    padding: 1rem;
+    border-radius: 12px;
+    text-align: center;
+    font-weight: 600;
+    box-shadow: 0 3px 10px rgba(14, 165, 233, 0.2);
+  }
+
+  .metric .count {
+    font-size: 1.8rem;
+    color: #0284c7;
+    margin-bottom: 0.3rem;
+    display: block;
+  }
+
+  /* Pledge Card */
+  #pledgesContainer div {
+    background: linear-gradient(135deg, #f0f9ff 0%, #dbeafe 100%);
+    padding: 1rem;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    box-shadow: 0 3px 10px rgba(59,130,246,0.15);
+  }
+
+  /* Back Button */
+  .back-btn {
+    display: inline-block;
+    margin-bottom: 1rem;
+    padding: 0.7rem 1.5rem;
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+    box-shadow: 0 3px 10px rgba(59,130,246,0.3);
+  }
+
+  .back-btn:hover {
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    box-shadow: 0 4px 14px rgba(29,78,216,0.4);
+    transform: translateY(-2px);
+  }
+</style>
+
+</head>
+<body>
+
+<div class="container">
+  <a href="pledge_wall.html" class="back-btn">← Back to Pledge Wall</a>
+
+  <h2>Youth, Employment, and Social Impact Initiative</h2>
+  <p><strong>Partner:</strong> Rosebank College</p>
+  <p><strong>Type:</strong> Strategic Collaboration</p>
+  <p><strong>Start Date:</strong> January 2026</p>
+  <p><strong>Status:</strong> 🟢 Active</p>
+  <p><strong>Reporting Cycle:</strong> Quarterly</p>
+  <p>
+    This partnership between iEvolution and Rosebank College seeks to bridge the education-to-employment gap by equipping students with practical skills, mentorship, and pathways into real-world opportunities. Together, we aim to empower South Africa’s youth to become catalysts for community-driven social and economic transformation.
+  </p>
+
+  <!-- Tabs -->
+  <div class="tabs">
+    <button class="tab-btn active" data-tab="progress">Progress Pillars</button>
+    <button class="tab-btn" data-tab="timeline">Timeline</button>
+    <button class="tab-btn" data-tab="impact">Impact Metrics</button>
+    <button class="tab-btn" data-tab="pledges">Pledges</button>
+  </div>
+
+  <!-- Progress Pillars -->
+  <div class="tab-content active" id="progress">
+    <div class="pillar">
+      <strong>Program Design:</strong> Develop curriculum and mentorship
+      <div class="pillar-bar">
+        <div class="pillar-progress" style="width:70%" data-tooltip="Pilot curriculum finalized, Updated: Mar 2026, Verified by iEvolution"></div>
+      </div>
+    </div>
+    <div class="pillar">
+      <strong>Youth Engagement:</strong> Recruit and onboard students
+      <div class="pillar-bar">
+        <div class="pillar-progress" style="width:60%" data-tooltip="45 of 60 youth onboarded, Updated: May 2026"></div>
+      </div>
+    </div>
+    <div class="pillar">
+      <strong>Employment Pathways:</strong> Link students to jobs
+      <div class="pillar-bar">
+        <div class="pillar-progress" style="width:30%" data-tooltip="10 internships secured, Updated: May 2026"></div>
+      </div>
+    </div>
+    <div class="pillar">
+      <strong>Social Impact Projects:</strong> Implement student-led projects
+      <div class="pillar-bar">
+        <div class="pillar-progress" style="width:50%" data-tooltip="3/5 projects launched, Updated: Jun 2026"></div>
+      </div>
+    </div>
+    <div class="pillar">
+      <strong>Sustainability & Scale:</strong> Secure funding and support
+      <div class="pillar-bar">
+        <div class="pillar-progress" style="width:40%" data-tooltip="Funding proposal submitted, Updated: Apr 2026"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Timeline -->
+  <div class="tab-content" id="timeline">
+    <ul class="timeline">
+      <li><strong>Feb 2026:</strong> Steering Committee Formed ✅ Completed</li>
+      <li><strong>Mar 2026:</strong> Program Design Phase 🟡 In Progress</li>
+      <li><strong>May 2026:</strong> Youth Cohort Recruitment 🟡 In Progress</li>
+      <li><strong>Jul 2026:</strong> First Cohort Launch 🔵 Upcoming</li>
+      <li><strong>Oct 2026:</strong> Mid-Year Impact Review 🔵 Upcoming</li>
+    </ul>
+  </div>
+
+  <!-- Impact Metrics -->
+  <div class="tab-content" id="impact">
+    <div class="metrics-grid">
+      <div class="metric"><span class="count">60</span>+ Youth Participants</div>
+      <div class="metric"><span class="count">20</span>+ Mentors Engaged</div>
+      <div class="metric"><span class="count">25</span> Job/Internship Opportunities Created</div>
+      <div class="metric"><span class="count">5</span> Community Projects Implemented</div>
+      <div class="metric"><span class="count">90%</span> Participant Satisfaction Rating</div>
+    </div>
+  </div>
+
+  <!-- Pledges -->
+  <div class="tab-content" id="pledges">
+    <div id="pledgesContainer"></div>
+  </div>
+</div>
+
+<script>
+  // Tabs
+  const tabBtns = document.querySelectorAll('.tab-btn');
+  const tabContents = document.querySelectorAll('.tab-content');
+  tabBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      tabBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const tab = btn.getAttribute('data-tab');
+      tabContents.forEach(content => content.classList.remove('active'));
+      document.getElementById(tab).classList.add('active');
+    });
+  });
+
+  // Load pledges dynamically
+  const pledgesContainer = document.getElementById('pledgesContainer');
+  const pledges = JSON.parse(localStorage.getItem('pledges')) || [];
+
+  if (pledges.length === 0) {
+    pledgesContainer.innerHTML = "<p>No pledges yet. Be the first to pledge!</p>";
+  } else {
+    pledgesContainer.innerHTML = '';
+    pledges.forEach(pledge => {
+      const pledgeDiv = document.createElement('div');
+      pledgeDiv.innerHTML = `
+        <p><strong>Name:</strong> ${pledge.name}</p>
+        <p><strong>Company:</strong> ${pledge.company}</p>
+        <p><strong>Email:</strong> ${pledge.email}</p>
+        <p><strong>Category:</strong> ${pledge.category}</p>
+        <p><strong>Pledge:</strong> ${pledge.message}</p>
+        <p><small>Date: ${pledge.date}</small></p>
+      `;
+      pledgesContainer.appendChild(pledgeDiv);
+    });
+  }
+
+  // Calculate Impact Metrics
+  const metrics = {
+    youth: 0,
+    mentors: 0,
+    jobs: 0,
+    projects: 0,
+    satisfaction: 0
+  };
+
+  pledges.forEach(p => {
+    switch(p.category) {
+      case "Youth Engagement": metrics.youth += p.impact; break;
+      case "Mentorship": metrics.mentors += p.impact; break;
+      case "Employment Pathways": metrics.jobs += p.impact; break;
+      case "Social Impact Projects": metrics.projects += p.impact; break;
+    }
+    metrics.satisfaction += 1; // each pledge increases satisfaction count
+  });
+
+  // Update metric cards
+  document.querySelector('.metrics-grid .metric:nth-child(1) .count').innerText = metrics.youth;
+  document.querySelector('.metrics-grid .metric:nth-child(2) .count').innerText = metrics.mentors;
+  document.querySelector('.metrics-grid .metric:nth-child(3) .count').innerText = metrics.jobs;
+  document.querySelector('.metrics-grid .metric:nth-child(4) .count').innerText = metrics.projects;
+  document.querySelector('.metrics-grid .metric:nth-child(5) .count').innerText = Math.min(100, Math.round((metrics.satisfaction / pledges.length) * 100)) + '%';
+
+  // Update Progress Bars dynamically
+  const pillarData = {
+    "Program Design": 70,
+    "Youth Engagement": metrics.youth ? Math.min(100, metrics.youth * 2) : 60,
+    "Employment Pathways": metrics.jobs ? Math.min(100, metrics.jobs * 10) : 30,
+    "Social Impact Projects": metrics.projects ? Math.min(100, metrics.projects * 20) : 50,
+    "Sustainability & Scale": 40
+  };
+
+  document.querySelectorAll('.pillar').forEach(p => {
+    const name = p.querySelector('strong').innerText.replace(":", "");
+    if(pillarData[name] !== undefined) {
+      const progress = p.querySelector('.pillar-progress');
+      progress.style.width = pillarData[name] + '%';
+    }
+  });
+
+</script>
+
+
+</body>
+</html>
